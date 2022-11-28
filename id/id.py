@@ -6,7 +6,7 @@ class ThreadID(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def id(self, ctx, *, message):
+    async def id(self, ctx):
         await ctx.send(ctx.thread.id)
 
 async def setup(bot):
