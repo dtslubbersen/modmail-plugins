@@ -1,17 +1,13 @@
 import discord
 from discord.ext import commands
 
-from core import checks
-from core.models import PermissionLevel
-
-class ID(commands.Cog):
+class ThreadID(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
-    @checks.has_permissions(PermissionLevel.SUPPORTER)
-    async def id(self, ctx):
+    async def id(self, ctx, *, message):
         await ctx.send(ctx.thread.id)
-        
+
 async def setup(bot):
-  await bot.add_cog(ID(bot)
+    await bot.add_cog(ThreadID(bot))
