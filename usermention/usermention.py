@@ -6,7 +6,7 @@ class UserMention(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def mention(self, ctx):
+    async def usermention(self, ctx):
         await ctx.send(f"<@!{ctx.thread.id}> (`{ctx.thread.id}`)")
 
 async def setup(bot):
